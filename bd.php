@@ -1,10 +1,21 @@
 <?php
-$datasource = "pgsql:host=177.44.36.94; port=1998; dbname=sis_car_aluguel";
-$user = "postgres";
-$pass = "bd123";
-$db = new PDO($datasource, $user, $pass);
+try {
+    // Configurações do banco de dados
+    $host = "ep-square-sun-a5eseov6.us-east-2.aws.neon.tech"; 
+    $port = 5432; 
+    $dbname = "neondb"; 
+    $user = "neondb_owner"; 
+    
+
+    $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
+
+    $db = new PDO($dsn, $user, $password);
+
+    // Configurar PDO para lançar exceções em caso de erro
+    $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+} catch (PDOException $e) {
+    // Exibir mensagem de erro, caso ocorra
+    echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
+}
 ?>
-
-
-
-
