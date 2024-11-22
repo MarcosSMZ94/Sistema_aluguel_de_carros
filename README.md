@@ -1,3 +1,9 @@
+# TODO 
+[] Sistema de login para funcionarios
+[] Melhor gerenciamento de erros, não encaminhar para a pagina padrão php onde o erro ocorreu
+[] Corrigir o sistema deixar entradas incompletas ou incorretas para o banco de dados
+[] Corrigir a alteração de dados de cliente e funcionario que permite entradas incompletas ou incorretas
+
 # Sistema para Gerenciamento de Aluguel de Automóveis
 
 Este sistema foi desenvolvido como trabalho para a matéria de Administração e Gerência de Redes de Computadores da Universidade federal de Itajubá UNIFEI - COM241.
