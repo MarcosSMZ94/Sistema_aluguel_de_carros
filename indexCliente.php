@@ -40,9 +40,9 @@ if (isset($_SESSION['cpf'])) {
                     <div id="menu">
                         <ul>
                             <?php
-                            if ($tipo = 'F') {
+                            if ($tipo == 'F') {
                                 print "<li class='current_page_item'><a href='indexFuncionario.php' accesskey='1' title=''>Principal</a></li>";
-                            } else if ($tipo = 'C') {
+                            } else if ($tipo == 'C') {
                                 print "<li class='current_page_item'><a href='indexCliente.php' accesskey='1' title=''>Principal</a></li>";
                             } else {
                                 print "<li class='current_page_item'><a href='index.php' accesskey='1' title=''>Principal</a></li>";
