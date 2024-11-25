@@ -5,7 +5,7 @@ try {
     $port = 5432; 
     $dbname = "neondb"; 
     $user = "neondb_owner"; 
-   
+    $password; 
 
     $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
 
