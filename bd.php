@@ -5,8 +5,8 @@ try {
     $port = 5432; 
     $dbname = "neondb"; 
     $user = "neondb_owner"; 
-    $password; 
-
+    $password = getenv('DB_PASSWORD');
+    
     $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
 
     $db = new PDO($dsn, $user, $password);
