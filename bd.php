@@ -1,7 +1,7 @@
 <?php
 try {
     // Configurações do banco de dados
-    $host = "ep-square-sun-a5eseov6.us-east-2.aws.neon.tech"; 
+    $host = getenv('NEONDB_HOST');
     $port = 5432; 
     $dbname = "neondb"; 
     $user = "neondb_owner"; 
