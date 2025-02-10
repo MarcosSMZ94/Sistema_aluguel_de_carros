@@ -2,10 +2,10 @@
 try {
     // Configurações do banco de dados
     $host = getenv('NEONDB_HOST');
-    $port = 5432; 
-    $dbname = "neondb"; 
-    $user = "neondb_owner"; 
-    $password = getenv('NEONDB_OWNER_PASSWORD'); 
+    $port = 5432;
+    $dbname = "neondb";
+    $user = "neondb_owner";
+    $password = getenv('NEONDB_OWNER_PASSWORD');
 
     $dsn = "pgsql:host=$host;port=$port;dbname=$dbname;sslmode=require";
 
@@ -18,4 +18,4 @@ try {
     // Exibir mensagem de erro, caso ocorra
     echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
 }
-?>
+
