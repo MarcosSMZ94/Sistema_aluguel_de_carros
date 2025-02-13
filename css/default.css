@@ -497,14 +497,6 @@ ul.contact li a:before {
 	color: rgba(0, 0, 0, 0.9);
 }
 
-#portfolio h3 {
-	display: block;
-	padding-bottom: 1em;
-	text-transform: uppercase;
-	font-size: 1em;
-	color: rgba(0, 0, 0, 0.9);
-}
-
 #portfolio .boxcar {
 	text-align: justify;
 	color: rgba(0, 0, 0, 0.7);

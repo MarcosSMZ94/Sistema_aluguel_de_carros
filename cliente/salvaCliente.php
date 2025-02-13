@@ -60,4 +60,4 @@ if ($stm->execute()) {
 } else {
     header(ERROR_LOCATION);
 }
-?>
+
