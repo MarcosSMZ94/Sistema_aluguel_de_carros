@@ -12,17 +12,16 @@ $placaAutomovel = $_POST['placaAutomovel'];
     <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
 
-
     <!--- Esta funcao formata mascara dos inputs-->
     <script type="text/javascript">
-		function formatar_mascara(src, mascara) {
- 			var campo = src.value.length;
- 			var saida = mascara.substring(0,1);
- 			var texto = mascara.substring(campo);
- 			if(texto.substring(0,1) != saida) {
- 			src.value += texto.substring(0,1);
- 			}
-		}
+        function formatar_mascara(src, mascara) {
+            var campo = src.value.length;
+            var saida = mascara.substring(0, 1);
+            var texto = mascara.substring(campo);
+            if (texto.substring(0, 1) != saida) {
+                src.value += texto.substring(0, 1);
+            }
+        }
     </script>
 
 </head>
@@ -45,21 +44,20 @@ $placaAutomovel = $_POST['placaAutomovel'];
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="salvaAluguel.php">
                                 <br>
-                                <label id="textocadastra">Placa:</label>
-                                <input type="text" id="campo" name="placa" readonly="true" value="<?php echo htmlspecialchars($placaAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <label id="textocadastra" for="placa">Placa:</label>
+                                <input type="text" id="placa" name="placa" readonly="true" value="<?php echo htmlspecialchars($placaAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
-                                <label id="textocadastra" >Data Locação:(A-M-D)</label>
-                                <input type="text" id="campo" name="dataLocacao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')"/>
+                                <label id="textocadastra" for="dataLocacao">Data Locação:(A-M-D)</label>
+                                <input type="text" id="dataLocacao" name="dataLocacao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" />
                                 <br>
 
-                                <label id="textocadastra" >Data Devolução: (A-M-D)</label>
-                                <input type="text" id="campo" name="dataDevolucao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')"/>
+                                <label id="textocadastra" for="dataDevolucao">Data Devolução: (A-M-D)</label>
+                                <input type="text" id="dataDevolucao" name="dataDevolucao" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" />
                                 <br>
                                 <br>
                                 <br>
 
-                            
                                 <div id="wrapper1">
                                     <button type="submit" id="botaoCadastro" class="button">
                                         Alugar
