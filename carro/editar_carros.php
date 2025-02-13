@@ -1,6 +1,6 @@
-<!DOCTYPE html>
-
 <?php
+define('CHECKED', "checked = 'checked'");
+
 include_once "../bd.php";
 $placaAutomovel = $_POST['placaAutomovel'];
 $query = "SELECT * FROM automovel where placa = '$placaAutomovel'";
@@ -26,6 +26,8 @@ if ($stm->execute()) {
 }
 ?>
 
+<!DOCTYPE html>
+<html>
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
@@ -34,10 +36,7 @@ if ($stm->execute()) {
     <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-
 </head>
-
-
 <body>
     <div id="wrapper1">
         <div id="header-wrapper">
@@ -57,71 +56,63 @@ if ($stm->execute()) {
                             <form enctype="multipart/form-data" method="POST" action="salvaEditaCarro.php">
 
                                 <label id="textocadastra">Placa:</label>
-                                <input readonly="true" type="text" id="campo" name="placaAutomovel" value="<?php print $placaAutomovel; ?>" />
+                                <input readonly="true" type="text" id="campo" name="placaAutomovel" value="<?php echo htmlspecialchars($placaAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Cor:</label>
-                                <input type="text" id="campo" name="corAutomovel" value="<?php print $corAutomovel; ?>" />
+                                <input type="text" id="campo" name="corAutomovel" value="<?php echo htmlspecialchars($corAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Chassis:</label>
-                                <input type="text" id="campo" name="chassisAutomovel" value="<?php print $chassisAutomovel; ?>" />
+                                <input type="text" id="campo" name="chassisAutomovel" value="<?php echo htmlspecialchars($chassisAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Nro de Portas:</label>
-                                <input type="text" id="campo" name="nro_de_portaAutomovel" value="<?php print $nro_de_portaAutomovel; ?>" />
+                                <input type="text" id="campo" name="nro_de_portaAutomovel" value="<?php echo htmlspecialchars($nro_de_portaAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Quilometragem:</label>
-                                <input type="text" id="campo" name="quilometragemAutomovel" value="<?php print $quilometragemAutomovel; ?>" />
+                                <input type="text" id="campo" name="quilometragemAutomovel" value="<?php echo htmlspecialchars($quilometragemAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Trasmissão:</label>
-                                <input type="text" id="campo" name="transmissaoAutomovel" value="<?php print $transmissaoAutomovel; ?>" />
+                                <input type="text" id="campo" name="transmissaoAutomovel" value="<?php echo htmlspecialchars($transmissaoAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Marca:</label>
-                                <input type="text" id="campo" name="marcaAutomovel" value="<?php print $marcaAutomovel; ?>" />
+                                <input type="text" id="campo" name="marcaAutomovel" value="<?php echo htmlspecialchars($marcaAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Combustivel:</label>
-                                <input type="text" id="campo" name="tipo_de_combustivelAutomovel" value="<?php print $tipo_de_combustivelAutomovel; ?>" />
+                                <input type="text" id="campo" name="tipo_de_combustivelAutomovel" value="<?php echo htmlspecialchars($tipo_de_combustivelAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Renavam:</label>
-                                <input type="text" id="campo" name="renavamAutomovel" value="<?php print $renavamAutomovel; ?>" />
+                                <input type="text" id="campo" name="renavamAutomovel" value="<?php echo htmlspecialchars($renavamAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Tipo:</label>
-                                <input type="text" id="campo" name="tipoAutomovel" value="<?php print $tipoAutomovel; ?>" />
+                                <input type="text" id="campo" name="tipoAutomovel" value="<?php echo htmlspecialchars($tipoAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastra">Valor por dia: </label>
-                                <input type="text" id="campo" name="valorAutomovel" value="<?php print $valorAutomovel; ?>" />
+                                <input type="text" id="campo" name="valorAutomovel" value="<?php echo htmlspecialchars($valorAutomovel, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
                                 <label id="textocadastracheck">Direção:</label>
-                                <input type="checkbox" id="textocadastra" name="direcaoAutomovel" <?php if ($direcaoAutomovel) {
-                                                                                                        echo "checked = 'checked'";
-                                                                                                    } ?> />
+                                <input type="checkbox" id="textocadastra" name="direcaoAutomovel" <?php if ($direcaoAutomovel) { echo CHECKED; } ?> />
                                 <br>
 
                                 <label id="textocadastracheck">Ar Condicionado: </label>
-                                <input type="checkbox" id="textocadastra" name="ar_condicionadoAutomovel" <?php if ($ar_condicionadoAutomovel) {
-                                                                                                                echo "checked = 'checked'";
-                                                                                                            } ?> />
+                                <input type="checkbox" id="textocadastra" name="ar_condicionadoAutomovel" <?php if ($ar_condicionadoAutomovel) { echo CHECKED; } ?> />
                                 <br>
 
                                 <label id="textocadastracheck">Manutenção: </label>
-                                <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" <?php if ($manutencaoAutomovel) {
-                                                                                                            echo "checked = 'checked'";
-                                                                                                        } ?> />
+                                <input type="checkbox" id="textocadastra" name="manutencaoAutomovel" <?php if ($manutencaoAutomovel) { echo CHECKED; } ?> />
                                 <br>
 
                                 <label id="textocadastracheck">Status: </label>
-                                <input type="checkbox" id="textocadastra" name="statusAutomovel" <?php if ($statusAutomovel) {
-                                                                                                        echo "checked = 'checked'";
-                                                                                                    } ?> />
+                                <input type="checkbox" id="textocadastra" name="statusAutomovel" <?php if ($statusAutomovel) { echo CHECKED; } ?> />
                                 <br>
 
                                 <div id="wrapper1">
@@ -140,5 +131,4 @@ if ($stm->execute()) {
             </div>
         </div>
 </body>
-
 </html>
