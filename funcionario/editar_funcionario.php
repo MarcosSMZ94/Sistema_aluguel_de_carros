@@ -117,9 +117,7 @@ if ($stm->execute()){
                                 <br>
 
                                 <label id="textocadastra">Status:</label>
-                                <input type="checkbox" id="campo" name="statusFunc" <?php if ($statusUsuario) {
-                                                                                                        echo "checked = 'checked'";
-                                                                                                    } ?> />
+                                <input type="checkbox" id="campo" name="statusFunc" <?php if ($statusUsuario) {echo "checked = 'checked'";} ?> />
                                 <br>
                                 <br>
 

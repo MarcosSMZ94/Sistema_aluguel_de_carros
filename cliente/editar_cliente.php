@@ -140,11 +140,7 @@ if ($stm->execute()) {
                                         </button>";
                                     }
                                         else{
-                                            echo "<button id='botaoCancelar' class='button' formaction='../indexFuncionario.php'>
-                                            Cancelar cadastro
-                                        </button>";
-                                        
-                                            } ?> 
+                                            echo "<button id='botaoCancelar' class='button' formaction='../indexFuncionario.php'>Cancelar cadastro</button>";} ?> 
                                 </div>
                             </form>
                         </div>

@@ -55,11 +55,11 @@ if (isset($_SESSION['cpf'])) {
                                 print "<li><a href='../login/login.php' accesskey='2' title=''>Login</a></li>";
                             }
                             ?>
-                            <li><a href="../categorias/economicos.php" accesskey="3" title="">Econômicos</a></li>
-                            <li><a href="../categorias/utilitarios.php" accesskey="4" title="">Utilitários</a></li>
-                            <li><a href="../categorias/suv.php" accesskey="5" title="">SUV</a></li>
-                            <li><a href="../categorias/luxo.php" accesskey="6" title="">Luxo</a></li>
-                            <li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
+                            <li><a href="../categorias/economicos.php" title="">Econômicos</a></li>
+                            <li><a href="../categorias/utilitarios.php" title="">Utilitários</a></li>
+                            <li><a href="../categorias/suv.php" title="">SUV</a></li>
+                            <li><a href="../categorias/luxo.php" title="">Luxo</a></li>
+                            <li><a href="../contato.php" title="">Contato</a></li>
 						</ul>
 					</div>
 					<?php

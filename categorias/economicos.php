@@ -49,28 +49,28 @@ if (isset($_SESSION['cpf'])) {
 						<ul>
 							<?php
 							if ($tipo == 'F') {
-								echo "<li><a href='../indexFuncionario.php' accesskey='1' title='Principal1'>Principal</a></li>";
+								echo "<li><a href='../indexFuncionario.php'  title='Principal1'>Principal</a></li>";
 							}
 							if ($tipo == 'C') {
-								echo "<li><a href='../indexCliente.php' accesskey='1' title='Principal2'>Principal</a></li>";
+								echo "<li><a href='../indexCliente.php' title='Principal2'>Principal</a></li>";
 							}
 							if ($tipo == '') {
-								echo "<li><a href='../index.php' accesskey='1' title='Principal3'>Principal</a></li>";
+								echo "<li><a href='../index.php'  title='Principal3'>Principal</a></li>";
 							}
 
 							?>
 							<?php
 							if (isset($_SESSION['cpf'])) {
-								print "<li><a href='../login/logout.php' accesskey='2' title=''>Logout</a></li>";
+								print "<li><a href='../login/logout.php'  title=''>Logout</a></li>";
 							} else {
-								print "<li><a href='../login/login.php' accesskey='2' title=''>Login</a></li>";
+								print "<li><a href='../login/login.php'  title=''>Login</a></li>";
 							}
 							?>
-							<li class="current_page_item"><a href="economicos.php" accesskey="3" title="">Econômicos</a></li>
+							<li class="current_page_item"><a href="economicos.php" title="">Econômicos</a></li>
 							<li><a href="utilitarios.php" accesskey="4" title="">Utilitários</a></li>
-							<li><a href="suv.php" accesskey="5" title="">SUV</a></li>
-							<li><a href="luxo.php" accesskey="6" title="">Luxo</a></li>
-							<li><a href="../contato.php" accesskey="7" title="">Contato</a></li>
+							<li><a href="suv.php" title="">SUV</a></li>
+							<li><a href="luxo.php" title="">Luxo</a></li>
+							<li><a href="../contato.php" title="">Contato</a></li>
 						</ul>
 					</div>
 					<?php
