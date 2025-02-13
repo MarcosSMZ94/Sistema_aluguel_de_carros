@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-
+<html lang="pt-BR" xml:lang="pt-BR">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Sistema de Gerenciamento de Aluguel de Automóveis</title>
@@ -13,13 +12,13 @@
     <!--- Esta funcao formata mascara dos inputs-->
     <script type="text/javascript">
         function formatar_mascara(src, mascara) {
-        var campo = src.value.length;
-        var saida = mascara.substring(0,1);
-        var texto = mascara.substring(campo);
-        if(texto.substring(0,1) != saida) {
-        src.value += texto.substring(0,1);
+            var campo = src.value.length;
+            var saida = mascara.substring(0, 1);
+            var texto = mascara.substring(campo);
+            if (texto.substring(0, 1) != saida) {
+                src.value += texto.substring(0, 1);
+            }
         }
-    }
     </script>
 
 </head>
@@ -42,8 +41,8 @@
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="editar_funcionario.php">
 
-                                <label id="textocadastra">CPF:</label>
-                                <input type="text" id="cpfFuncionario" maxlength="14" onkeypress="formatar_mascara(this,'###.###.###-##')"  name="cpfFuncionario" />
+                                <label id="textocadastra" for="cpfFuncionario">CPF:</label>
+                                <input type="text" id="cpfFuncionario" maxlength="14" onkeypress="formatar_mascara(this,'###.###.###-##')" name="cpfFuncionario" />
                                 <br>
                                 <div id="wrapper1">
                                     <button type="submit" id="botaoCadastro" class="button">

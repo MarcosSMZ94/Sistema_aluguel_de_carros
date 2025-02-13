@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-
+<html lang="pt-BR" xml:lang="pt-BR">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Sistema de Gerenciamento de Aluguel de Automóveis</title>
@@ -9,9 +8,7 @@
     <link href="http://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet" />
     <link href="../css/default.css" rel="stylesheet" type="text/css" media="all" />
     <link href="../css/fonts.css" rel="stylesheet" type="text/css" media="all" />
-
 </head>
-
 <body>
     <div id="wrapper1">
         <div id="header-wrapper">
@@ -30,8 +27,8 @@
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="editar_carros.php">
 
-                                <label id="textocadastra">Placa:</label>
-                                <input type="text" id="campo" name="placaAutomovel" />
+                                <label id="textocadastra" for="placaAutomovel">Placa:</label>
+                                <input type="text" id="placaAutomovel" name="placaAutomovel" />
                                 <br>
                                 <div id="wrapper1">
                                     <button type="submit" id="botaoCadastro" class="button">
@@ -48,5 +45,4 @@
             </div>
         </div>
 </body>
-
 </html>

@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-
-
+<html lang="pt-BR" xml:lang="pt-BR">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
@@ -12,14 +11,14 @@
 
     <!--- Esta funcao formata mascara dos inputs-->
     <script type="text/javascript">
-			function formatar_mascara(src, mascara) {
- 			var campo = src.value.length;
- 			var saida = mascara.substring(0,1);
- 			var texto = mascara.substring(campo);
- 			if(texto.substring(0,1) != saida) {
- 			src.value += texto.substring(0,1);
- 			}
-		}
+        function formatar_mascara(src, mascara) {
+            var campo = src.value.length;
+            var saida = mascara.substring(0, 1);
+            var texto = mascara.substring(campo);
+            if (texto.substring(0, 1) != saida) {
+                src.value += texto.substring(0, 1);
+            }
+        }
     </script>
 
 </head>
@@ -42,46 +41,46 @@
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="../cliente/salvaCliente.php">
 
-                                <label id="textocadastra">Nome:</label>
-                                <input type="text" id="campo" name="nomeCliente" />
+                                <label id="textocadastra" for="nomeCliente">Nome:</label>
+                                <input type="text" id="nomeCliente" name="nomeCliente" />
                                 <br>
 
-                                <label id="textocadastra">Data de nascimento (AAAA-MM-DD):</label>
-                                <input type="text" id="campo" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataCliente" />
-                                <br>
-                                <br>
-
-                                <label id="textocadastra">CPF:</label>
-                                <input type="text" id="campo" maxlength="14" onkeypress="formatar_mascara(this,'###.###.###-##')" name="cpfCliente" />
-                                <br>
-
-                                <label id="textocadastra">CEP:</label>
-                                <input type="text" id="campo" maxlength="10" onkeypress="formatar_mascara(this,'##.###-###')" name="cepCliente" />
-                                <br>
-
-                                <label id="textocadastra">Rua:</label>
-                                <input type="text" id="campo" name="ruaCliente" />
-                                <br>
-
-                                <label id="textocadastra">Bairro:</label>
-                                <input type="text" id="campo" name="bairroCliente" />
-                                <br>
-
-                                <label id="textocadastra">Cidade:</label>
-                                <input type="text" id="campo" name="cidadeCliente" />
-                                <br>
-
-                                <label id="textocadastra">Carteira de Motorista:</label>
-                                <input type="text" maxlenght="11" id="campo" name="carteiraMotoraCliente" />
+                                <label id="textocadastra" for="dataCliente">Data de nascimento (AAAA-MM-DD):</label>
+                                <input type="text" id="dataCliente" maxlength="10" onkeypress="formatar_mascara(this,'####-##-##')" name="dataCliente" />
                                 <br>
                                 <br>
 
-                                <label id="textocadastra">Senha:</label>
-                                <input type="password" id="campo" name="senhaCliente" />
+                                <label id="textocadastra" for="cpfCliente">CPF:</label>
+                                <input type="text" id="cpfCliente" maxlength="14" onkeypress="formatar_mascara(this,'###.###.###-##')" name="cpfCliente" />
                                 <br>
 
-                                <label id="textocadastra">Confirme a senha:</label>
-                                <input type="password" id="campo" />
+                                <label id="textocadastra" for="cepCliente">CEP:</label>
+                                <input type="text" id="cepCliente" maxlength="10" onkeypress="formatar_mascara(this,'##.###-###')" name="cepCliente" />
+                                <br>
+
+                                <label id="textocadastra" for="ruaCliente">Rua:</label>
+                                <input type="text" id="ruaCliente" name="ruaCliente" />
+                                <br>
+
+                                <label id="textocadastra" for="bairroCliente">Bairro:</label>
+                                <input type="text" id="bairroCliente" name="bairroCliente" />
+                                <br>
+
+                                <label id="textocadastra" for="cidadeCliente">Cidade:</label>
+                                <input type="text" id="cidadeCliente" name="cidadeCliente" />
+                                <br>
+
+                                <label id="textocadastra" for="carteiraMotoraCliente">Carteira de Motorista:</label>
+                                <input type="text" maxlength="11" id="carteiraMotoraCliente" name="carteiraMotoraCliente" />
+                                <br>
+                                <br>
+
+                                <label id="textocadastra" for="senhaCliente">Senha:</label>
+                                <input type="password" id="senhaCliente" name="senhaCliente" />
+                                <br>
+
+                                <label id="textocadastra" for="confirmaSenhaCliente">Confirme a senha:</label>
+                                <input type="password" id="confirmaSenhaCliente" name="confirmaSenhaCliente" />
                                 <br>
                                 <br>
 
@@ -101,5 +100,4 @@
             </div>
         </div>
 </body>
-
 </html>

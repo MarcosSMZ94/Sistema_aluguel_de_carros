@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html lang="pt-BR" xml:lang="pt-BR">
 <?php
 // Inicia a sessão.
 session_start();
@@ -82,53 +83,51 @@ if ($stm->execute()) {
                         <div id="wrapperlogin">
                             <form enctype="multipart/form-data" method="POST" action="salvaEditaCliente.php">
 
-                                <label id="textocadastra">Código de Usuário:</label>
-                                <input readonly="true" type="text" id="campo" name="codUsuario" value="<?php echo htmlspecialchars($codUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <label id="textocadastra" for="codUsuario">Código de Usuário:</label>
+                                <input readonly="true" type="text" id="codUsuario" name="codUsuario" value="<?php echo htmlspecialchars($codUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
                                 <br>
 
-                                <label id="textocadastra">Nome:</label>
-                                <input type="text" id="campo" name="nomeCliente" value="<?php echo htmlspecialchars($nomeUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <label id="textocadastra" for="nomeCliente">Nome:</label>
+                                <input type="text" id="nomeCliente" name="nomeCliente" value="<?php echo htmlspecialchars($nomeUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
-                                <label id="textocadastra">Data de nascimento (A-M-D):</label>
-                                <input type="text" id="campo" name="dataCliente" value="<?php echo htmlspecialchars($dataUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
-                                <br>
-                                <br>
-
-                                <label id="textocadastra">CPF:</label>
-                                <input readonly="true" type="text" id="campo" name="cpfCliente" value="<?php echo htmlspecialchars($cpfCliente, ENT_QUOTES, 'UTF-8'); ?>" />
-                                <br>
-
-                                <label id="textocadastra">CEP:</label>
-                                <input type="text" id="campo" name="cepCliente" value="<?php echo htmlspecialchars($cepUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
-                                <br>
-
-                                <label id="textocadastra">Rua:</label>
-                                <input type="text" id="campo" name="ruaCliente" value="<?php echo htmlspecialchars($ruaUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
-                                <br>
-
-                                <label id="textocadastra">Bairro:</label>
-                                <input type="text" id="campo" name="bairroCliente" value="<?php echo htmlspecialchars($bairroUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
-                                <br>
-
-                                <label id="textocadastra">Cidade:</label>
-                                <input type="text" id="campo" name="cidadeCliente" value="<?php echo htmlspecialchars($cidadeUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
-                                <br>
-
-                                <label id="textocadastra">Carteira de Motorista:</label>
-                                <input type="text" id="campo" name="carteiraCliente" value="<?php echo htmlspecialchars($carteiraCliente, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <label id="textocadastra" for="dataCliente">Data de nascimento (A-M-D):</label>
+                                <input type="text" id="dataCliente" name="dataCliente" value="<?php echo htmlspecialchars($dataUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
                                 <br>
 
-                                <label id="textocadastra">Senha:</label>
-                                <input type="password" id="campo" name="senhaCliente" value="<?php echo htmlspecialchars($senhaUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <label id="textocadastra" for="cpfCliente">CPF:</label>
+                                <input readonly="true" type="text" id="cpfCliente" name="cpfCliente" value="<?php echo htmlspecialchars($cpfCliente, ENT_QUOTES, 'UTF-8'); ?>" />
                                 <br>
 
-                                <label id="textocadastra">Status:</label>
-                                <input type="checkbox" id="campo" name="statusCliente" <?php if ($statusUsuario) {
-                                                                                            echo "checked = 'checked'";
-                                                                                        } ?> />
+                                <label id="textocadastra" for="cepCliente">CEP:</label>
+                                <input type="text" id="cepCliente" name="cepCliente" value="<?php echo htmlspecialchars($cepUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <br>
+
+                                <label id="textocadastra" for="ruaCliente">Rua:</label>
+                                <input type="text" id="ruaCliente" name="ruaCliente" value="<?php echo htmlspecialchars($ruaUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <br>
+
+                                <label id="textocadastra" for="bairroCliente">Bairro:</label>
+                                <input type="text" id="bairroCliente" name="bairroCliente" value="<?php echo htmlspecialchars($bairroUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <br>
+
+                                <label id="textocadastra" for="cidadeCliente">Cidade:</label>
+                                <input type="text" id="cidadeCliente" name="cidadeCliente" value="<?php echo htmlspecialchars($cidadeUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <br>
+
+                                <label id="textocadastra" for="carteiraCliente">Carteira de Motorista:</label>
+                                <input type="text" id="carteiraCliente" name="carteiraCliente" value="<?php echo htmlspecialchars($carteiraCliente, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <br>
+                                <br>
+
+                                <label id="textocadastra" for="senhaCliente">Senha:</label>
+                                <input type="password" id="senhaCliente" name="senhaCliente" value="<?php echo htmlspecialchars($senhaUsuario, ENT_QUOTES, 'UTF-8'); ?>" />
+                                <br>
+
+                                <label id="textocadastra" for="statusCliente">Status:</label>
+                                <input type="checkbox" id="statusCliente" name="statusCliente" <?php if ($statusUsuario) { echo "checked = 'checked'"; } ?> />
                                 <br>
                                 <br>
 
